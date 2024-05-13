@@ -1,6 +1,6 @@
 const express = require("express");
 const jwt = require("jsonwebtoken");
-const bcrypt = require("bcrypt");
+var bcrypt = require('bcryptjs');
 require('dotenv').config()
 const{adminaccessmodel} =require("../../Models/Adminmodals/AdminAccessmodel")
 
