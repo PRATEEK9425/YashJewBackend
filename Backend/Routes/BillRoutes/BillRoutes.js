@@ -27,13 +27,13 @@ BillRoutes.get("/:id",async(req,res)=>{
     }
       
 })
-BillRoutes.get("/:cusnmb",async(req,res)=>{
+BillRoutes.get("/searchbynmb/:cusnmb",async(req,res)=>{
     const CusNmb= req.params.cusnmb
     try {
         const BillData = await   customerBillmodel.find({Contact:CusNmb})
     res.send(BillData)
     } catch (error) {
-        res.send("BillData Not able To Fetch")
+        res.send(" No result Found")
         res.send(error)
     }
 })
